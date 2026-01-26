@@ -1,7 +1,7 @@
 {
   "version": "1.34.4",
   "tag": "v1.34.4",
-  "generatedAt": "2026-01-22T16:14:58.952Z",
+  "generatedAt": "2026-01-26T14:08:31.039Z",
   "namespace": "WAWebJS",
   "exports": {
     "classes": [
@@ -294,7 +294,7 @@
             "returnType": "Promise<Array<Channel> | []>",
             "async": false,
             "optional": false,
-            "description": "Searches for channels based on search criteria, there are some notes:\n1. The method finds only channels you are not subscribed to currently\n2. If you have never been subscribed to a found channel\nor you have unsubscribed from it with  set to 'true',\nthe lastMessage property of a found channel will be 'null'",
+            "description": "Searches for channels based on search criteria, there are some notes: 1. The method finds only channels you are not subscribed to currently 2. If you have never been subscribed to a found channel or you have unsubscribed from it with set to 'true', the lastMessage property of a found channel will be 'null'",
             "examples": []
           },
           {
@@ -351,7 +351,7 @@
             "returnType": "Promise<Channel>",
             "async": false,
             "optional": false,
-            "description": "Gets a  instance by invite code",
+            "description": "Gets a instance by invite code",
             "examples": []
           },
           {
@@ -369,7 +369,7 @@
             "returnType": "Promise<Channel[]>",
             "async": false,
             "optional": false,
-            "description": "Gets all cached  instances",
+            "description": "Gets all cached instances",
             "examples": []
           },
           {
@@ -942,7 +942,7 @@
             "returnType": "Promise<void>",
             "async": false,
             "optional": false,
-            "description": "Changing the background synchronization setting.\nNOTE: this action will take effect after you restart the client.",
+            "description": "Changing the background synchronization setting. NOTE: this action will take effect after you restart the client.",
             "examples": []
           },
           {
@@ -957,7 +957,7 @@
             "returnType": "Promise<number>",
             "async": false,
             "optional": false,
-            "description": "Get user device count by ID\nEach WaWeb Connection counts as one device, and the phone (if exists) counts as one\nSo for a non-enterprise user with one WaWeb connection it should return \"2\"",
+            "description": "Get user device count by ID Each WaWeb Connection counts as one device, and the phone (if exists) counts as one So for a non-enterprise user with one WaWeb connection it should return \"2\"",
             "examples": []
           },
           {
@@ -1034,7 +1034,7 @@
                 "optional": false
               }
             ],
-            "returnType": "Promise<{\n            chatId: string;\n            content: string;\n            createdAt: number;\n            id: string;\n            modifiedAt: number;\n            type: string;\n        }>",
+            "returnType": "Promise<{ chatId: string; content: string; createdAt: number; id: string; modifiedAt: number; type: string; }>",
             "async": false,
             "optional": false,
             "description": "Get a customer note",
@@ -1243,7 +1243,7 @@
             "returnType": "Promise<boolean>",
             "async": false,
             "optional": false,
-            "description": "Transfers a channel ownership to another user.\nNote: the user you are transferring the channel ownership to must be a channel admin.",
+            "description": "Transfers a channel ownership to another user. Note: the user you are transferring the channel ownership to must be a channel admin.",
             "examples": []
           },
           {
@@ -1291,7 +1291,7 @@
               },
               {
                 "name": "listener",
-                "type": "(\n            /** \n             * Object containing session information, when using LegacySessionAuth. Can be used to restore the session\n             */\n            session?: ClientSession\n        ) => void",
+                "type": "(session?: ClientSession) => void",
                 "optional": false
               }
             ],
@@ -1332,7 +1332,7 @@
               },
               {
                 "name": "listener",
-                "type": "(\n            /** the new connection state */\n            state: WAState\n        ) => void",
+                "type": "(state: WAState) => void",
                 "optional": false
               }
             ],
@@ -1352,7 +1352,7 @@
               },
               {
                 "name": "listener",
-                "type": "(\n            /** reason that caused the disconnect */\n            reason: WAState | \"LOGOUT\"\n        ) => void",
+                "type": "(reason: WAState | \"LOGOUT\") => void",
                 "optional": false
               }
             ],
@@ -1372,7 +1372,7 @@
               },
               {
                 "name": "listener",
-                "type": "(\n            /** GroupNotification with more information about the action */\n            notification: GroupNotification\n        ) => void",
+                "type": "(notification: GroupNotification) => void",
                 "optional": false
               }
             ],
@@ -1392,7 +1392,7 @@
               },
               {
                 "name": "listener",
-                "type": "(\n            /** GroupNotification with more information about the action */\n            notification: GroupNotification\n        ) => void",
+                "type": "(notification: GroupNotification) => void",
                 "optional": false
               }
             ],
@@ -1412,7 +1412,7 @@
               },
               {
                 "name": "listener",
-                "type": "(\n            /** GroupNotification with more information about the action */\n            notification: GroupNotification\n        ) => void",
+                "type": "(notification: GroupNotification) => void",
                 "optional": false
               }
             ],
@@ -1432,14 +1432,14 @@
               },
               {
                 "name": "listener",
-                "type": "(\n            /** GroupNotification with more information about the action */\n            notification: GroupNotification\n        ) => void",
+                "type": "(notification: GroupNotification) => void",
                 "optional": false
               }
             ],
             "returnType": "GroupNotification",
             "async": false,
             "optional": false,
-            "description": "Emitted when some user requested to join the group\nthat has the membership approval mode turned on",
+            "description": "Emitted when some user requested to join the group that has the membership approval mode turned on",
             "examples": []
           },
           {
@@ -1452,7 +1452,7 @@
               },
               {
                 "name": "listener",
-                "type": "(\n            /** GroupNotification with more information about the action */\n            notification: GroupNotification\n        ) => void",
+                "type": "(notification: GroupNotification) => void",
                 "optional": false
               }
             ],
@@ -1472,7 +1472,7 @@
               },
               {
                 "name": "listener",
-                "type": "(\n            /** Message with more information about the event. */\n            message: Message,\n            /** Old user's id. */\n            oldId : String,\n            /** New user's id. */\n            newId : String,\n            /** Indicates if a contact or a group participant changed their phone number. */\n            isContact : Boolean\n        ) => void",
+                "type": "(message: Message, oldId: String, newId: String, isContact: Boolean) => void",
                 "optional": false
               }
             ],
@@ -1492,7 +1492,7 @@
               },
               {
                 "name": "listener",
-                "type": "(\n            /** The message with media that was uploaded */\n            message: Message\n        ) => void",
+                "type": "(message: Message) => void",
                 "optional": false
               }
             ],
@@ -1512,7 +1512,7 @@
               },
               {
                 "name": "listener",
-                "type": "(\n            /** The message that was received */\n            message: Message\n        ) => void",
+                "type": "(message: Message) => void",
                 "optional": false
               }
             ],
@@ -1532,7 +1532,7 @@
               },
               {
                 "name": "listener",
-                "type": "(\n            /** The message that was affected */\n            message: Message,\n            /** The new ACK value */\n            ack: MessageAck\n        ) => void",
+                "type": "(message: Message, ack: MessageAck) => void",
                 "optional": false
               }
             ],
@@ -1552,7 +1552,7 @@
               },
               {
                 "name": "listener",
-                "type": "(\n            /** The message that was affected */\n            message: Message,\n            /** New text message */\n            newBody: String,\n            /** Prev text message */\n            prevBody: String\n        ) => void",
+                "type": "(message: Message, newBody: String, prevBody: String) => void",
                 "optional": false
               }
             ],
@@ -1572,7 +1572,7 @@
               },
               {
                 "name": "listener",
-                "type": "(\n            /** The chat that was affected */\n            chat: Chat\n        ) => void",
+                "type": "(chat: Chat) => void",
                 "optional": false
               }
             ],
@@ -1592,7 +1592,7 @@
               },
               {
                 "name": "listener",
-                "type": "(\n            /** The message that was created */\n            message: Message\n        ) => void",
+                "type": "(message: Message) => void",
                 "optional": false
               }
             ],
@@ -1612,7 +1612,7 @@
               },
               {
                 "name": "listener",
-                "type": "(\n            /** The message that was ciphertext */\n            message: Message\n        ) => void",
+                "type": "(message: Message) => void",
                 "optional": false
               }
             ],
@@ -1632,7 +1632,7 @@
               },
               {
                 "name": "listener",
-                "type": "(\n            /** The message that was revoked, in its current state. It will not contain the original message's data */\n            message: Message,\n            /**The message that was revoked, before it was revoked. \n             * It will contain the message's original data. \n             * Note that due to the way this data is captured, \n             * it may be possible that this param will be undefined. */\n            revoked_msg?: Message | null\n        ) => void",
+                "type": "(message: Message, revoked_msg?: Message | null) => void",
                 "optional": false
               }
             ],
@@ -1652,7 +1652,7 @@
               },
               {
                 "name": "listener",
-                "type": "(\n            /** The message that was revoked */\n            message: Message\n        ) => void",
+                "type": "(message: Message) => void",
                 "optional": false
               }
             ],
@@ -1672,7 +1672,7 @@
               },
               {
                 "name": "listener",
-                "type": "(\n            /** The reaction object */\n            reaction: Reaction\n        ) => void",
+                "type": "(reaction: Reaction) => void",
                 "optional": false
               }
             ],
@@ -1692,7 +1692,7 @@
               },
               {
                 "name": "listener",
-                "type": "(\n            /** The chat that was removed */\n            chat: Chat\n        ) => void",
+                "type": "(chat: Chat) => void",
                 "optional": false
               }
             ],
@@ -1712,7 +1712,7 @@
               },
               {
                 "name": "listener",
-                "type": "(\n            /** The chat that was archived/unarchived */\n            chat: Chat,\n            /** State the chat is currently in */\n            currState: boolean,\n            /** State the chat was previously in */\n            prevState: boolean\n        ) => void",
+                "type": "(chat: Chat, currState: boolean, prevState: boolean) => void",
                 "optional": false
               }
             ],
@@ -1752,7 +1752,7 @@
               },
               {
                 "name": "listener",
-                "type": "(\n            /** qr code string\n             *  @example ```1@9Q8tWf6bnezr8uVGwVCluyRuBOJ3tIglimzI5dHB0vQW2m4DQ0GMlCGf,f1/vGcW4Z3vBa1eDNl3tOjWqLL5DpYTI84DMVkYnQE8=,ZL7YnK2qdPN8vKo2ESxhOQ==``` */\n            qr: string\n        ) => void",
+                "type": "(qr: string) => void",
                 "optional": false
               }
             ],
@@ -1772,7 +1772,7 @@
               },
               {
                 "name": "listener",
-                "type": "(\n            /** pairing code string\n             *  @example `8W2WZ3TS` */\n            code: string\n        ) => void",
+                "type": "(code: string) => void",
                 "optional": false
               }
             ],
@@ -1792,7 +1792,7 @@
               },
               {
                 "name": "listener",
-                "type": "(\n            /** The call that started */\n            call: Call\n        ) => void",
+                "type": "(call: Call) => void",
                 "optional": false
               }
             ],
@@ -1852,14 +1852,14 @@
               },
               {
                 "name": "listener",
-                "type": "(\n            vote: PollVote\n        ) => void",
+                "type": "(vote: PollVote) => void",
                 "optional": false
               }
             ],
             "returnType": "PollVote",
             "async": false,
             "optional": false,
-            "description": "Emitted when some poll option is selected or deselected,\nshows a user's current selected option(s) on the poll",
+            "description": "Emitted when some poll option is selected or deselected, shows a user's current selected option(s) on the poll",
             "examples": []
           }
         ],
@@ -1890,7 +1890,7 @@
           },
           {
             "name": "onAuthenticationNeeded",
-            "type": "() => Promise<{\n            failed?: boolean; \n            restart?: boolean; \n            failureEventPayload?: any\n        }>",
+            "type": "() => Promise<{ failed?: boolean; restart?: boolean; failureEventPayload?: any }>",
             "optional": false,
             "readonly": false
           },
@@ -1931,7 +1931,7 @@
       {
         "name": "NoAuth",
         "extends": "AuthStrategy",
-        "description": "No session restoring functionality\nWill need to authenticate via QR code every time",
+        "description": "No session restoring functionality Will need to authenticate via QR code every time",
         "constructors": [],
         "properties": [],
         "methods": [],
@@ -1946,7 +1946,7 @@
             "parameters": [
               {
                 "name": "options",
-                "type": "{\n            clientId?: string,\n            dataPath?: string,\n            rmMaxRetries?: number\n        }",
+                "type": "{ clientId?: string, dataPath?: string, rmMaxRetries?: number }",
                 "optional": true
               }
             ]
@@ -1978,7 +1978,7 @@
             "parameters": [
               {
                 "name": "options",
-                "type": "{\n            store: Store,\n            clientId?: string,\n            dataPath?: string,\n            backupSyncIntervalMs: number,\n            rmMaxRetries?: number\n        }",
+                "type": "{ store: Store, clientId?: string, dataPath?: string, backupSyncIntervalMs: number, rmMaxRetries?: number }",
                 "optional": true
               }
             ]
@@ -2004,13 +2004,13 @@
       {
         "name": "LegacySessionAuth",
         "extends": "AuthStrategy",
-        "description": "Legacy session auth strategy\nNot compatible with multi-device accounts.",
+        "description": "Legacy session auth strategy Not compatible with multi-device accounts.",
         "constructors": [
           {
             "parameters": [
               {
                 "name": "options",
-                "type": "{\n            session?: ClientSession,\n            restartOnAuthFail?: boolean,\n        }",
+                "type": "{ session?: ClientSession, restartOnAuthFail?: boolean, }",
                 "optional": true
               }
             ]
@@ -2118,7 +2118,7 @@
           },
           {
             "name": "pollOptions",
-            "type": "Array<{\n            name: string,\n            localId: number\n        }>",
+            "type": "Array<{ name: string, localId: number }>",
             "optional": false,
             "readonly": false
           },
@@ -2171,7 +2171,7 @@
           },
           {
             "name": "eventSendOptions",
-            "type": "{\n            description?: string;\n            endTimeTs?: number;\n            location?: string;\n            callType?: string;\n            isEventCanceled?: boolean;\n            messageSecret?: string;\n        }",
+            "type": "{ description?: string; endTimeTs?: number; location?: string; callType?: string; isEventCanceled?: boolean; messageSecret?: string; }",
             "optional": false,
             "readonly": false
           }
@@ -2475,7 +2475,7 @@
             "type": "ClientInfoPhone",
             "optional": false,
             "readonly": false,
-            "description": "Information about the phone this client is connected to.  Not available in multi-device.",
+            "description": "Information about the phone this client is connected to. Not available in multi-device.",
             "deprecated": true
           },
           {
@@ -2669,7 +2669,7 @@
             "type": "string",
             "optional": true,
             "readonly": false,
-            "description": "Sets the browser name of a current linked device, i.e.: 'Firefox'.\nValid value are: 'Chrome' | 'Firefox' | 'IE' | 'Opera' | 'Safari' | 'Edge'"
+            "description": "Sets the browser name of a current linked device, i.e.: 'Firefox'. Valid value are: 'Chrome' | 'Firefox' | 'IE' | 'Opera' | 'Safari' | 'Edge'"
           },
           {
             "name": "proxyAuthentication",
@@ -2685,7 +2685,7 @@
             "optional": true,
             "readonly": false,
             "description": "Phone number pairing configuration. Refer the requestPairingCode function of Client.",
-            "defaultValue": "{\n  phoneNumber: \"\",\n  showNotification: true,\n  intervalMs: 180000,\n}"
+            "defaultValue": "{ phoneNumber: \"\", showNotification: true, intervalMs: 180000, }"
           }
         ],
         "methods": [],
@@ -2849,7 +2849,7 @@
             "type": "number",
             "optional": true,
             "readonly": false,
-            "description": "The number of seconds for the messages to disappear in the group,\nwon't take an effect if the group is been creating with myself only",
+            "description": "The number of seconds for the messages to disappear in the group, won't take an effect if the group is been creating with myself only",
             "defaultValue": "0"
           },
           {
@@ -2857,14 +2857,14 @@
             "type": "string",
             "optional": true,
             "readonly": false,
-            "description": "The ID of a parent community group to link the newly created group with,\nwon't take an effect if the group is been creating with myself only"
+            "description": "The ID of a parent community group to link the newly created group with, won't take an effect if the group is been creating with myself only"
           },
           {
             "name": "autoSendInviteV4",
             "type": "boolean",
             "optional": true,
             "readonly": false,
-            "description": "If true, the inviteV4 will be sent to those participants\nwho have restricted others from being automatically added to groups,\notherwise the inviteV4 won't be sent",
+            "description": "If true, the inviteV4 will be sent to those participants who have restricted others from being automatically added to groups, otherwise the inviteV4 won't be sent",
             "defaultValue": "true"
           },
           {
@@ -2931,7 +2931,7 @@
           },
           {
             "name": "participants",
-            "type": "{\n            [participantId: string]: {\n                statusCode: number,\n                message: string,\n                isGroupCreator: boolean,\n                isInviteV4Sent: boolean\n            };\n        }",
+            "type": "{ [participantId: string]: { statusCode: number, message: string, isGroupCreator: boolean, isInviteV4Sent: boolean }; }",
             "optional": false,
             "readonly": false,
             "description": "An object that handles the result value for each added to the group participant"
@@ -3007,7 +3007,7 @@
             "type": "boolean",
             "optional": true,
             "readonly": false,
-            "description": "If true, after an unsubscription, it will completely remove a channel from the channel collection\nmaking it seem like the current user have never interacted with it.\nOtherwise it will only remove a channel from the list of channels the current user is subscribed to\nand will set the membership type for that channel to GUEST"
+            "description": "If true, after an unsubscription, it will completely remove a channel from the channel collection making it seem like the current user have never interacted with it. Otherwise it will only remove a channel from the list of channels the current user is subscribed to and will set the membership type for that channel to GUEST"
           }
         ],
         "methods": [],
@@ -3256,7 +3256,7 @@
             "type": "number",
             "optional": false,
             "readonly": false,
-            "description": "Indicates how many times the message was forwarded.\nThe maximum value is 127."
+            "description": "Indicates how many times the message was forwarded. The maximum value is 127."
           },
           {
             "name": "isStarred",
@@ -3302,7 +3302,7 @@
           },
           {
             "name": "groupMentions",
-            "type": "{\n            groupSubject: string;\n            groupJid: string;\n        }[]",
+            "type": "{ groupSubject: string; groupJid: string; }[]",
             "optional": false,
             "readonly": false,
             "description": "Indicates whether there are group mentions in the message body"
@@ -3319,7 +3319,7 @@
             "type": "string",
             "optional": false,
             "readonly": false,
-            "description": "ID for who this message is for.\nIf the message is sent by the current user, it will be the Chat to which the message is being sent.\nIf the message is sent by another user, it will be the ID for the current user."
+            "description": "ID for who this message is for. If the message is sent by the current user, it will be the Chat to which the message is being sent. If the message is sent by another user, it will be the ID for the current user."
           },
           {
             "name": "type",
@@ -3330,7 +3330,7 @@
           },
           {
             "name": "links",
-            "type": "Array<{\n            link: string,\n            isSuspicious: boolean\n        }>",
+            "type": "Array<{ link: string, isSuspicious: boolean }>",
             "optional": false,
             "readonly": false,
             "description": "Links included in the message."
@@ -3389,7 +3389,7 @@
             "type": "MessageId",
             "optional": true,
             "readonly": false,
-            "description": "Protocol message key.\nCan be used to retrieve the ID of an original message that was revoked."
+            "description": "Protocol message key. Can be used to retrieve the ID of an original message that was revoked."
           },
           {
             "name": "dynamicReplyButtons",
@@ -3462,7 +3462,7 @@
           },
           {
             "name": "eventLocation",
-            "type": "{\n            degreesLatitude: number;\n            degreesLongitude: number;\n            name: string;\n        }",
+            "type": "{ degreesLatitude: number; degreesLongitude: number; name: string; }",
             "optional": true,
             "readonly": false,
             "description": "The location of the event"
@@ -3555,7 +3555,7 @@
             "type": "(content: MessageContent, chatId?: string, options?: MessageSendOptions) => Promise<Message>",
             "optional": false,
             "readonly": false,
-            "description": "Sends a message as a reply to this message. \nIf chatId is specified, it will be sent through the specified Chat.\nIf not, it will send the message in the same Chat as the original message was sent."
+            "description": "Sends a message as a reply to this message. If chatId is specified, it will be sent through the specified Chat. If not, it will send the message in the same Chat as the original message was sent."
           },
           {
             "name": "react",
@@ -3646,7 +3646,7 @@
             "type": "(editedEventObject: Event) => Promise<Message | null>",
             "optional": false,
             "readonly": false,
-            "description": "Edits the current ScheduledEvent message.\nOnce the event is canceled, it can not be edited."
+            "description": "Edits the current ScheduledEvent message. Once the event is canceled, it can not be edited."
           },
           {
             "name": "vote",
@@ -3658,7 +3658,7 @@
         ],
         "methods": [],
         "examples": [
-          "{\n  mediaKey: undefined,\n  id: {\n    fromMe: false,\n    remote: `554199999999@c.us`,\n    id: '1234567890ABCDEFGHIJ',\n    _serialized: `false_554199999999@c.us_1234567890ABCDEFGHIJ`\n  },\n  ack: -1,\n  hasMedia: false,\n  body: 'Hello!',\n  type: 'chat',\n  timestamp: 1591482682,\n  from: `554199999999@c.us`,\n  to: `554188888888@c.us`,\n  author: undefined,\n  isForwarded: false,\n  broadcast: false,\n  fromMe: false,\n  hasQuotedMsg: false,\n  hasReaction: false,\n  location: undefined,\n  mentionedIds: []\n}"
+          "{ mediaKey: undefined, id: { fromMe: false, remote: `554199999999@c.us`, id: '1234567890ABCDEFGHIJ', _serialized: `false_554199999999@c.us_1234567890ABCDEFGHIJ` }, ack: -1, hasMedia: false, body: 'Hello!', type: 'chat', timestamp: 1591482682, from: `554199999999@c.us`, to: `554188888888@c.us`, author: undefined, isForwarded: false, broadcast: false, fromMe: false, hasQuotedMsg: false, hasReaction: false, location: undefined, mentionedIds: [] }"
         ]
       },
       {
@@ -3811,7 +3811,7 @@
             "type": "SelectedPollOption[]",
             "optional": false,
             "readonly": false,
-            "description": "The selected poll option(s)\nIf it's an empty array, the user hasn't selected any options on the poll,\nmay occur when they deselected all poll options"
+            "description": "The selected poll option(s) If it's an empty array, the user hasn't selected any options on the poll, may occur when they deselected all poll options"
           },
           {
             "name": "interractedAtTs",
@@ -3893,7 +3893,7 @@
         "properties": [
           {
             "name": "id",
-            "type": "{\n            server: string,\n            user: string,\n            _serialized: string\n        }",
+            "type": "{ server: string, user: string, _serialized: string }",
             "optional": false,
             "readonly": false,
             "description": "Chat Object ID"
@@ -4027,7 +4027,7 @@
           },
           {
             "name": "groupMentions",
-            "type": "{\n            /** The name of a group to mention (can be custom) */\n            subject: string,\n            /** The group ID, e.g.: 'XXXXXXXXXX@g.us' */\n            id: string\n        }[]",
+            "type": "{ subject: string, id: string }[]",
             "optional": true,
             "readonly": false,
             "description": "An array of object that handle group mentions"
@@ -4305,7 +4305,7 @@
             "type": "() => Promise<Chat>",
             "optional": false,
             "readonly": false,
-            "description": "Returns the Chat that corresponds to this Contact.  \nWill return null when getting chat for currently logged in user."
+            "description": "Returns the Chat that corresponds to this Contact. Will return null when getting chat for currently logged in user."
           },
           {
             "name": "block",
@@ -4364,7 +4364,7 @@
           }
         ],
         "examples": [
-          "{\n  id: {\n    server: 'c.us',\n    user: '554199999999',\n    _serialized: `554199999999@c.us`\n  },\n  number: '554199999999',\n  isBusiness: false,\n  isEnterprise: false,\n  labels: [],\n  name: undefined,\n  pushname: 'John',\n  sectionHeader: undefined,\n  shortName: undefined,\n  statusMute: false,\n  type: 'in',\n  verifiedLevel: undefined,\n  verifiedName: undefined,\n  isMe: false,\n  isUser: true,\n  isGroup: false,\n  isWAContact: true,\n  isMyContact: false\n}"
+          "{ id: { server: 'c.us', user: '554199999999', _serialized: `554199999999@c.us` }, number: '554199999999', isBusiness: false, isEnterprise: false, labels: [], name: undefined, pushname: 'John', sectionHeader: undefined, shortName: undefined, statusMute: false, type: 'in', verifiedLevel: undefined, verifiedName: undefined, isMe: false, isUser: true, isGroup: false, isWAContact: true, isMyContact: false }"
         ]
       },
       {
@@ -4435,7 +4435,7 @@
         "properties": [
           {
             "name": "config",
-            "type": "{\n            sun: BusinessHoursOfDay,\n            mon: BusinessHoursOfDay,\n            tue: BusinessHoursOfDay,\n            wed: BusinessHoursOfDay,\n            thu: BusinessHoursOfDay,\n            fri: BusinessHoursOfDay,\n        }",
+            "type": "{ sun: BusinessHoursOfDay, mon: BusinessHoursOfDay, tue: BusinessHoursOfDay, wed: BusinessHoursOfDay, thu: BusinessHoursOfDay, fri: BusinessHoursOfDay, }",
             "optional": false,
             "readonly": false
           },
@@ -4457,7 +4457,7 @@
         "properties": [
           {
             "name": "businessProfile",
-            "type": "{\n            /** The contact's business profile id */\n            id: ContactId,\n\n            /** The contact's business profile tag */\n            tag: string,\n\n            /** The contact's business profile description */\n            description: string,\n\n            /** The contact's business profile categories */\n            categories: BusinessCategory[],\n\n            /** The contact's business profile options */\n            profileOptions: {\n                /** The contact's business profile commerce experience*/\n                commerceExperience: string,\n                \n                /** The contact's business profile cart options */\n                cartEnabled: boolean,\n            }\n\n            /** The contact's business profile email */\n            email: string,\n\n            /** The contact's business profile websites */\n            website: string[],\n\n            /** The contact's business profile latitude */\n            latitude: number,\n            \n            /** The contact's business profile longitude */\n            longitude: number,\n            \n            /** The contact's business profile work hours*/\n            businessHours: BusinessHours\n            \n            /** The contact's business profile address */\n            address: string,\n            \n            /** The contact's business profile facebook page */\n            fbPage: object,\n            \n            /** Indicate if the contact's business profile linked */\n            ifProfileLinked: boolean\n            \n            /** The contact's business profile coverPhoto */\n            coverPhoto: null | any,\n        }",
+            "type": "{ id: ContactId, tag: string, description: string, categories: BusinessCategory[], profileOptions: { commerceExperience: string, cartEnabled: boolean, } email: string, website: string[], latitude: number, longitude: number, businessHours: BusinessHours address: string, fbPage: object, ifProfileLinked: boolean coverPhoto: null | any, }",
             "optional": false,
             "readonly": false,
             "description": "The contact's business profile"
@@ -4705,7 +4705,7 @@
           },
           {
             "name": "getCustomerNote",
-            "type": "() => Promise<{\n            chatId: string;\n            content: string;\n            createdAt: number;\n            id: string;\n            modifiedAt: number;\n            type: string;\n        }>",
+            "type": "() => Promise<{ chatId: string; content: string; createdAt: number; id: string; modifiedAt: number; type: string; }>",
             "optional": false,
             "readonly": false,
             "description": "Get a customer note"
@@ -4713,7 +4713,7 @@
         ],
         "methods": [],
         "examples": [
-          "{\n  id: {\n    server: 'c.us',\n    user: '554199999999',\n    _serialized: `554199999999@c.us`\n  },\n  name: '+55 41 9999-9999',\n  isGroup: false,\n  isReadOnly: false,\n  unreadCount: 6,\n  timestamp: 1591484087,\n  archived: false\n}"
+          "{ id: { server: 'c.us', user: '554199999999', _serialized: `554199999999@c.us` }, name: '+55 41 9999-9999', isGroup: false, isReadOnly: false, unreadCount: 6, timestamp: 1591484087, archived: false }"
         ]
       },
       {
@@ -4721,7 +4721,7 @@
         "properties": [
           {
             "name": "id",
-            "type": "{\n            server: string;\n            user: string;\n            _serialized: string;\n        }",
+            "type": "{ server: string; user: string; _serialized: string; }",
             "optional": false,
             "readonly": false,
             "description": "ID that represents the channel"
@@ -4877,7 +4877,7 @@
             "returnType": "Promise<boolean>",
             "async": false,
             "optional": false,
-            "description": "Updates available reactions to use in the channel\n\nValid values for passing to the method are:\n0 for NONE reactions to be avaliable\n1 for BASIC reactions to be available: 👍, ❤️, 😂, 😮, 😢, 🙏\n2 for ALL reactions to be available",
+            "description": "Updates available reactions to use in the channel Valid values for passing to the method are: 0 for NONE reactions to be avaliable 1 for BASIC reactions to be available: 👍, ❤️, 😂, 😮, 😢, 🙏 2 for ALL reactions to be available",
             "examples": []
           },
           {
@@ -5003,7 +5003,7 @@
             "returnType": "Promise<boolean>",
             "async": false,
             "optional": false,
-            "description": "Transfers a channel ownership to another user.\nNote: the user you are transferring the channel ownership to must be a channel admin.",
+            "description": "Transfers a channel ownership to another user. Note: the user you are transferring the channel ownership to must be a channel admin.",
             "examples": []
           },
           {
@@ -5027,7 +5027,7 @@
             "type": "boolean",
             "optional": true,
             "readonly": false,
-            "description": "If true, after the channel ownership is being transferred to another user,\nthe current user will be dismissed as a channel admin and will become to a channel subscriber."
+            "description": "If true, after the channel ownership is being transferred to another user, the current user will be dismissed as a channel admin and will become to a channel subscriber."
           }
         ],
         "methods": [],
@@ -5077,7 +5077,7 @@
             "type": "number",
             "optional": true,
             "readonly": false,
-            "description": "The amount of messages to return. If no limit is specified, the available messages will be returned.\nNote that the actual number of returned messages may be smaller if there aren't enough messages in the conversation. \nSet this to Infinity to load all messages."
+            "description": "The amount of messages to return. If no limit is specified, the available messages will be returned. Note that the actual number of returned messages may be smaller if there aren't enough messages in the conversation. Set this to Infinity to load all messages."
           },
           {
             "name": "fromMe",
@@ -5118,7 +5118,7 @@
         ],
         "methods": [],
         "examples": [
-          "id: {\n  server: 'c.us',\n  user: '554199999999',\n  _serialized: `554199999999@c.us`\n},"
+          "id: { server: 'c.us', user: '554199999999', _serialized: `554199999999@c.us` },"
         ]
       },
       {
@@ -5146,7 +5146,7 @@
             "type": "Array<number>|number",
             "optional": true,
             "readonly": false,
-            "description": "The number of milliseconds to wait before adding the next participant.\nIf it is an array, a random sleep time between the sleep[0] and sleep[1] values will be added\n(the difference must be >=100 ms, otherwise, a random sleep time between sleep[1] and sleep[1] + 100\nwill be added). If sleep is a number, a sleep time equal to its value will be added",
+            "description": "The number of milliseconds to wait before adding the next participant. If it is an array, a random sleep time between the sleep[0] and sleep[1] values will be added (the difference must be >=100 ms, otherwise, a random sleep time between sleep[1] and sleep[1] + 100 will be added). If sleep is a number, a sleep time equal to its value will be added",
             "defaultValue": "[250,500]"
           },
           {
@@ -5154,7 +5154,7 @@
             "type": "boolean",
             "optional": true,
             "readonly": false,
-            "description": "If true, the inviteV4 will be sent to those participants\nwho have restricted others from being automatically added to groups,\notherwise the inviteV4 won't be sent",
+            "description": "If true, the inviteV4 will be sent to those participants who have restricted others from being automatically added to groups, otherwise the inviteV4 won't be sent",
             "defaultValue": "true"
           },
           {
@@ -5512,7 +5512,7 @@
         ],
         "methods": [],
         "examples": [
-          "{\n\"id\": \"123456789\",\n\"price\": \"150000\",\n\"thumbnailId\": \"123456789\",\n\"thumbnailUrl\": \"https://mmg.whatsapp.net\",\n\"currency\": \"GTQ\",\n\"name\": \"Store Name\",\n\"quantity\": 1\n}"
+          "{ \"id\": \"123456789\", \"price\": \"150000\", \"thumbnailId\": \"123456789\", \"thumbnailUrl\": \"https://mmg.whatsapp.net\", \"currency\": \"GTQ\", \"name\": \"Store Name\", \"quantity\": 1 }"
         ]
       },
       {
@@ -5557,7 +5557,7 @@
         ],
         "methods": [],
         "examples": [
-          "{\n\"products\": [\n{\n\"id\": \"123456789\",\n\"price\": \"150000\",\n\"thumbnailId\": \"123456789\",\n\"thumbnailUrl\": \"https://mmg.whatsapp.net\",\n\"currency\": \"GTQ\",\n\"name\": \"Store Name\",\n\"quantity\": 1\n}\n],\n\"subtotal\": \"150000\",\n\"total\": \"150000\",\n\"currency\": \"GTQ\",\n\"createdAt\": 1610136796,\n\"sellerJid\": \"55555555@s.whatsapp.net\"\n}"
+          "{ \"products\": [ { \"id\": \"123456789\", \"price\": \"150000\", \"thumbnailId\": \"123456789\", \"thumbnailUrl\": \"https://mmg.whatsapp.net\", \"currency\": \"GTQ\", \"name\": \"Store Name\", \"quantity\": 1 } ], \"subtotal\": \"150000\", \"total\": \"150000\", \"currency\": \"GTQ\", \"createdAt\": 1610136796, \"sellerJid\": \"55555555@s.whatsapp.net\" }"
         ]
       },
       {
@@ -5623,7 +5623,7 @@
         ],
         "methods": [],
         "examples": [
-          "{\nid: {\nfromMe: true,\nremote: {\nserver: 'c.us',\nuser: '5511999999999',\n_serialized: '5511999999999@c.us'\n},\n id: 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA',\n_serialized: 'true_5511999999999@c.us_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'\n},\npaymentCurrency: 'BRL',\npaymentAmount1000: 1000,\npaymentMessageReceiverJid: {\nserver: 'c.us',\nuser: '5511999999999',\n_serialized: '5511999999999@c.us'\n},\npaymentTransactionTimestamp: 1623463058,\npaymentStatus: 4,\npaymentTxnStatus: 4,\npaymentNote: 'note'\n}"
+          "{ id: { fromMe: true, remote: { server: 'c.us', user: '5511999999999', _serialized: '5511999999999@c.us' }, id: 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', _serialized: 'true_5511999999999@c.us_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' }, paymentCurrency: 'BRL', paymentAmount1000: 1000, paymentMessageReceiverJid: { server: 'c.us', user: '5511999999999', _serialized: '5511999999999@c.us' }, paymentTransactionTimestamp: 1623463058, paymentStatus: 4, paymentTxnStatus: 4, paymentNote: 'note' }"
         ]
       },
       {
@@ -5703,7 +5703,7 @@
         ],
         "methods": [],
         "examples": [
-          "Call {\nid: 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA',\nfrom: '5511999999@c.us',\ntimestamp: 1625003709,\nisVideo: false,\nisGroup: false,\nfromMe: false,\ncanHandleLocally: false,\nwebClientShouldHandle: false,\nparticipants: []\n}"
+          "Call { id: 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', from: '5511999999@c.us', timestamp: 1625003709, isVideo: false, isGroup: false, fromMe: false, canHandleLocally: false, webClientShouldHandle: false, participants: [] }"
         ]
       }
     ],
@@ -6154,11 +6154,11 @@
       },
       {
         "name": "MessageInfo",
-        "type": "{\n        delivery: Array<{id: ContactId, t: number}>,\n        deliveryRemaining: number,\n        played: Array<{id: ContactId, t: number}>,\n        playedRemaining: number,\n        read: Array<{id: ContactId, t: number}>,\n        readRemaining: number\n    }"
+        "type": "{ delivery: Array<{id: ContactId, t: number}>, deliveryRemaining: number, played: Array<{id: ContactId, t: number}>, playedRemaining: number, read: Array<{id: ContactId, t: number}>, readRemaining: number }"
       },
       {
         "name": "InviteV4Data",
-        "type": "{\n        inviteCode: string,\n        inviteCodeExp: number,\n        groupId: string,\n        groupName?: string,\n        fromId: string,\n        toId: string\n    }"
+        "type": "{ inviteCode: string, inviteCodeExp: number, groupId: string, groupName?: string, fromId: string, toId: string }"
       },
       {
         "name": "MessageContent",
@@ -6166,7 +6166,7 @@
       },
       {
         "name": "GroupParticipant",
-        "type": "{\n        id: ContactId,\n        isAdmin: boolean\n        isSuperAdmin: boolean\n    }"
+        "type": "{ id: ContactId, isAdmin: boolean isSuperAdmin: boolean }"
       },
       {
         "name": "ChangeParticipantsPermissions",
@@ -6175,7 +6175,7 @@
       },
       {
         "name": "ReactionList",
-        "type": "{\n        id: string,\n        aggregateEmoji: string,\n        hasReactionByMe: boolean,\n        senders: Array<Reaction>\n    }"
+        "type": "{ id: string, aggregateEmoji: string, hasReactionByMe: boolean, senders: Array<Reaction> }"
       }
     ],
     "constants": [
